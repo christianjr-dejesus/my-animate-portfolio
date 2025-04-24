@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+    <style> 
+        .prevent-select {
+          -webkit-user-select: none; /* Safari */
+          -ms-user-select: none; /* IE 10 and IE 11 */
+          user-select: none; /* Standard syntax */
+        } use class="prevent-select"
+    </style>
+    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>CDJ Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" href="images/logo_icon.svg" type="image/svg" />
+</head>
+<body>
+    <div class="container">
+        <header>
+        <div class="left">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+
+        <ul id="navBar">
+            <li><a href="#home" class="active">Home<span></span></a></li>
+            <li><a href="#about">About<span></span></a></li>
+            <li><a href="#projects">Projects<span></span></a></li>
+            <li><a href="#skills">Skills<span></span></a></li>
+        </ul>
+
+        <a href="#contacts"><div><button>Contact</button></div></a>
+
+        <div class="menu-icon"><i class='bx bx-menu-alt-right' id="munene"></i></div>
+        </header>
+
+        <div class="sidebar">
+            <ul id="sidelist">
+                <li><a href="#home" data-text="&nbsp;Home">&nbsp;Home</a></li>
+                <li><a href="#about" data-text="&nbsp;About">&nbsp;About</a></li>
+                <li><a href="#projects" data-text="&nbsp;Projects">&nbsp;Projects</a></li>
+                <li><a href="#skills" data-text="&nbsp;Skills">&nbsp;Skills</a></li>
+            </ul>
+
+            <a href="#contacts"><div><button>Contact</button></div></a>
+
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@clentv1829" target="_blank"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.instagram.com/ashente.ascii/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://web.facebook.com/GifferTheCrafter" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+            </div>
+        </div>
+
+        <div class="cursor"></div>
+        <!--cursor-->
+        <script type="text/javascript">
+        const cursor = document.querySelector(".cursor");
+        var timeout;
+
+        //follow cursor
+        document.addEventListener("mousemove", (e) => {
+            let x = e.pageX;
+            let y = e.pageY;
+
+            cursor.style.top = y + "px";
+            cursor.style.left = x + "px";
+            cursor.style.display = "block";
+
+            function mouseStopped(){
+                cursor.style.display = "none";
+            }
+            clearTimeout(timeout);
+            timeout = setTimeout(mouseStopped, 1000);
+        });
+
+        //cursor effects 
+        document.addEventListener("mouseout", () => {
+            cursor.style.display = "none";
+        });
+        </script>
+
+        <!--star bg-->
+        <section class="wrapper">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        </section>
+
+        <div class="blackhole-box">
+        <video loop autoplay muted preload plays-inline src="videos/blackhole.mp4" type="video/mp4"></video>
+        </div>
+
+        <section class="hero" id="home"> 
+            <div class="hero-info autoBlur">
+                <div class="hero-info-title">
+                    <i class='bx bxl-sketch'></i>
+                    Front-end Developer Portfolio
+                </div>
+    
+                <h1>Hi! I'm <span class="gradient">Christian Jr.</span></span></h1>
+    
+                <p>A Front-end Developer with Experience in website. Mobile and Software Developement. Check out my skills.</p>
+    
+                <a href="#contacts"><button><i class='bx bx-send' ></i> Contact Me</button></a>
+            </div>
+    
+            <div class="hero-profile">
+                <img class="autoBlur" src="images/profile.png" alt="profile">
+            </div>
+    
+            <a href="#about"><div class="scroll-down"></div></a>
+        </section>
+
+        <section class="info-section" id="about">
+                <h1 class="section-title autoDisplay">Hello, There</h1>
+                <div class="info-cards">
+                    <div class="card autoDisplayCard">
+                        <h1>Hi there, I'm Christian Jr.</h1>
+                        <p>With 1 year of experience, I have honed my skills in both 
+                        frontend and backend dev, creating dynamic and responsive websites.
+                        </p>
+                        <img src="images/grid1.png" alt="card-image">
+                    </div>
+                    <div class="card autoDisplayCard">
+                        <h1>Tech Stack</h1>
+                        <p>I specialize in a variety of languages, frameworks, and tools
+                        that allow me to build robust and scalable applications.
+                        </p>
+                        <img src="images/grid2.png" alt="card-image">
+                    </div>
+                    <div class="card autoDisplayCard">
+                        <h1>I'm very flexible with time zone communications & locations</h1>
+                        <p>I'm based in Philippines, Manila and open to remote word worldwide.
+                        </p>
+                        <video loop autoplay muted preload plays-inline src="videos/glob.mp4" type="video/mp4"></video>
+                        <a href="#contacts"><button><i class='bx bx-link-external'></i> Contact Me</button></a>
+                    </div>
+                    <div class="card autoDisplayCard">
+                        <h1>My Passion for Coding</h1>
+                        <p>I love solving problems and building things through code.
+                        Programming isn't just my profession-it's my passion. I enjoy
+                        exploring new technologies, and enhancing my skills.
+                        </p>
+                        <img src="images/grid4.png" alt="card-image">
+                    </div>
+                </div>
+        </section>
+                
+        <section class="my-projects" id="projects">
+        <h1 class="section-title autoDisplay">My Projects</h1>
+        <div class="project-card">
+            <div class="project-vidbox autoBlur" data-tilt>
+                <video id="projectVideo1" src="videos/project1.mp4"></video>
+                <div class="hover-sign"></div>
+            </div>
+
+            <div class="project-info fadeInRight">
+                <h1>Animated <span class="gradient">Portfolio</span> Website</h1>
+                <p>A website with animated and responsive features is designed to 
+                provide a visually dynamic and interactive user experience while 
+                adapting seamlessly to different devices and screen sizes. </p>
+
+                <a href="https://cdjdevportfolio.pages.dev/" target="_blank"><button><i class='bx bx-link-external'></i> Website</button></a>
+            </div>
+        </div>
+        <!--
+        <div class="project-list">
+            <input type="radio" name="slide" id="c1" checked >
+            <label for="c1" class="ccard autoBlur" data-tilt data-tilt-glare>
+                <div class="row">
+                    <div class="num">1</div>
+                    <div class="description">
+                        <h4>Winter</h4>
+                        <p>Winter has so much to offer 
+                        creative activities</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="ccard autoBlur" data-tilt data-tilt-glare>
+                <div class="row">
+                    <div class="num">2</div>
+                    <div class="description">
+                        <h4>Digital</h4>
+                        <p>Winter has so much to offer 
+                        creative activities</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="ccard autoBlur" data-tilt data-tilt-glare>
+                <div class="row">
+                    <div class="num">3</div>
+                    <div class="description">
+                        <h4>Globalization</h4>
+                        <p>Winter has so much to offer 
+                        creative activities</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="ccard autoBlur" data-tilt data-tilt-glare>
+                <div class="row">
+                    <div class="num">4</div>
+                    <div class="description">
+                        <h4>New Technologies</h4>
+                        <p>Winter has so much to offer 
+                        creative activities</p>
+                    </div>
+                </div>
+            </label>
+        </div>
+        -->
+        </section>
+
+        <section class="my-projects2">
+                <div class="titlename fadeInRight2">
+                    <h1>This is my</h1>
+                    <h1>Previous Projects</h1>
+
+                    <div class="sun"></div>
+                    <div class="earth">
+                        <div class="moon"></div>
+                    </div>
+                </div>
+
+ 
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>01</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>NOISE DETECTOR FOR LIBRARY</h2>
+                            <p>Creating a noise detector for a library using an Arduino Uno is a great project to help maintain a quiet environment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>02</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>STRESS DETECTOR</h2>
+                            <p>Creating a Stress Detector with an Arduino Uno can be an interesting project, but measuring stress directly requires the detection of physiological signs, such as heart rate, skin conductivity (Galvanic Skin Response), or other indicators that can be sensed using sensors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>03</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>ADVANCED WATCH WITH SOS </h2>
+                            <p>Creating an Advanced Watch with SOS functionality using Arduino Uno is a fun and practical project. You can build a basic smartwatch that detects an emergency (e.g., pressing a button for an SOS signal) and alerts others using various methods, such as flashing lights, buzzer alarms, or sending a signal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>04</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>BANKING SYSTEM – MOBILE APPLICATION</h2>
+                            <p>Building a Banking System Mobile App using Android Studio involves creating an Android application that allows users to perform various banking operations, such as checking balances, transferring funds, viewing transaction history, and managing accounts. Below is a step-by-step guide to help you develop a basic banking app using Android Studio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>05</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>CALAMITIPS (SURVIVAL TIPS) – MOBILE APP</h2>
+                            <p>Building a CalamiTips (Survival Tips) Mobile App using Android Studio is a great project idea, especially for those interested in emergency preparedness and survival skills. The app could provide users with useful survival tips and guidelines for various emergency situations like natural disasters, lost in the wilderness, first aid, etc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>06</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>EUCLID (HOSPITAL RECORD) – MOBILE APP</h2>
+                            <p>Creating a Hospital Record Management System (Euclid) mobile app using Android Studio is a great idea for managing hospital records, such as patient details, treatment history, appointment scheduling, and more. The app will allow users (doctors, nurses, and administrators) to manage patient records easily and efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>07</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>COVID VACCINE MONITOR – WEB DEVELOPMENT</h2>
+                            <p>Creating a COVID Vaccine Monitor web application is an excellent project that can be used to track the vaccination status of individuals, manage vaccine appointments, and provide important vaccination information. It can also display statistics like vaccine availability and track the number of people vaccinated.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-info autoBlur2">
+                    <div class="num-list">
+                        <div class="numscroll">
+                            <h1>08</h1>
+                            <div class="scroll-list"></div>
+                        </div>
+                        <div class="info-project">
+                            <h2>QR CODE ATTENDANCE SYSTEM – WEB DEVELOPMENT</h2>
+                            <p>Creating a QR Code Attendance System using Web Development technologies is a great project idea. This system can be used to automate the process of tracking student or employee attendance by scanning a QR code. Here's a simple approach to building this system using HTML, CSS, JavaScript, and a Backend like Node.js with a Database (like MySQL or MongoDB) for data storage.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <h1 class="section-title autoDisplay">
+                My Skills
+            </h1>
+    
+            <div class="skills-box">
+                <img class="skills-image" src="images/digital brain.png" 
+                alt="skills-image">
+    
+                <div class="designer autoDisplay">
+                    <h1 class="gradient">Designer <i class='bx bx-laptop'></i></h1>
+                    <p>I have expertise in HTML, CSS, JavaScript, and design tools like
+                    Adobe Photoshop, Adobe XD, Adobe Illustrator and CorelDraw. My strength 
+                    lies in blending aesthetics with functionality to create seamless user experiences.</p>
+                </div>
+    
+                <div class="coder autoDisplay">
+                    <h1 class="gradient">Coder <i class='bx bx-code-block'></i></h1>
+                    <p>I skilled in HTML, CSS, JavaScript, and frameworks like
+                        React and Node.js. I also have experience with database 
+                        management using Firebase, MySQL, and PostgresSQL.</p>
+                </div>
+    
+                <div class="slider-anim" reverse="true" style="
+                    --width: 100px;
+                    --height: 100px;
+                    --quantity: 9;
+                ">
+                    <div class="list">
+                        <div class="item" style="--position: 1"><img src="images/1.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 2"><img src="images/2.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 3"><img src="images/3.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 4"><img src="images/4.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 5"><img src="images/5.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 6"><img src="images/6.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 7"><img src="images/7.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 8"><img src="images/8.png" alt="slider-image"></div>
+                        <div class="item" style="--position: 9"><img src="images/9.png" alt="slider-image"></div>
+                    </div>
+                </div>
+    
+                <div class="slider-anim2" reverse="true" style="
+                    --width: 100px;
+                    --height: 100px;
+                    --quantity: 9;
+                ">
+                    <div class="list2">
+                        <div class="item2" style="--position: 1"><img src="images/1.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 2"><img src="images/2.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 3"><img src="images/3.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 4"><img src="images/4.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 5"><img src="images/5.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 6"><img src="images/6.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 7"><img src="images/7.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 8"><img src="images/8.png" alt="slider-image2"></div>
+                        <div class="item2" style="--position: 9"><img src="images/9.png" alt="slider-image2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="slider" data-tilt data-tilt-glare>
+            <div class="skill-list">
+                <div class="skill-card" style="--i:-1">
+                    <div class="desc">
+                        <h1 class="gradient"><i class="ri-brush-ai-line"></i></h1>
+                        <p>Design</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="--i:0">
+                    <div class="desc">
+                        <h1 class="gradient"><i class="ri-code-box-line"></i></h1>
+                        <p>Code</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="--i:1">
+                    <div class="desc">
+                        <h1 class="gradient"><i class="ri-brain-line"></i></h1>
+                        <p>Creative</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="allskills">
+            <div class="left-info autoBlur2">
+                <h1>Frontend development refers to everything the user interacts with directly on a website or application. It involves designing and building the user interface (UI) and user experience (UX).</h1>
+                <h2>Backend development refers to the server-side, focusing on databases, server logic, and application functionality that users don’t directly see. It's where data is processed and stored.</h2>
+            </div>
+
+            <div class="right-info autoBlur2">
+                <div class="title-skills">
+                    <h1>MY SKILLS</h1>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll">
+                        <h1 class="active">Skill 01</h1>
+                    </div>
+                    <div class="info-skill">
+                        <h2 class="active">JAVA</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll2">
+                        <h1 class="active2">Skill 02</h1>
+                    </div>
+                    <div class="info-skill2">
+                        <h2 class="active2">KOTLIN</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll3">
+                        <h1 class="active3">Skill 03</h1>
+                    </div>
+                    <div class="info-skill">
+                        <h2 class="active">HTML</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll4">
+                        <h1 class="active4">Skill 04</h1>
+                    </div>
+                    <div class="info-skill4">
+                        <h2 class="active4">CSS</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll5">
+                        <h1 class="active5">Skill 05</h1>
+                    </div>
+                    <div class="info-skill5">
+                        <h2 class="active5">JavaScript</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll6">
+                        <h1 class="active6">Skill 06</h1>
+                    </div>
+                    <div class="info-skill6">
+                        <h2 class="active6">PHP</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll7">
+                        <h1 class="active7">Skill 07</h1>
+                    </div>
+                    <div class="info-skill7">
+                        <h2 class="active7">PYTHON</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll8">
+                        <h1 class="active8">Skill 08</h1>
+                    </div>
+                    <div class="info-skill8">
+                        <h2 class="active8">MYSQL</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll9">
+                        <h1 class="active9">Skill 09</h1>
+                    </div>
+                    <div class="info-skill9">
+                        <h2 class="active9">FIREBASE</h2>
+                    </div>
+                </div>
+
+                <div class="skills-list">
+                    <div class="skillscroll10">
+                        <h1 class="active10">Skill 10</h1>
+                    </div>
+                    <div class="info-skill10">
+                        <h2 class="active10">UI/UX</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contacts">
+            <h1 class="section-title autoDisplay"> Let's Talk</h1>
+    
+            <div class="social-box autoBlur">
+                <a href="tel:+639600253193"><i class='bx bxs-phone-call'></i> +63 960 0253 193</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gregsgy.345@gmail.com&su=Title here&body=Message here" target="_blank"><i class='bx bxl-gmail'></i> gregsgy.345@gmail.com</a>
+                <a href="https://www.linkedin.com/in/christian-jr-de-jesus-51535312b/" target="_blank"><i class='bx bxl-linkedin-square' ></i> Christian Jr. De Jesus</a>
+            
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@clentv1829" target="_blank"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://www.instagram.com/ashente.ascii/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://web.facebook.com/GifferTheCrafter" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                </div>
+            </div>
+     
+            <div class="contact-box autoBlur" style="z-index: 1000 !important;">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="238595a2-fdd7-432e-9911-16f5eafbc480">
+                <p>Whether you're looking to build a new website, improve your existing
+                platform, or bring a unique project to file. I'm here to help.</p>
+    
+                <p>Full Name</p>
+                <input type="text" name="name" placeholder="Your Full Name" required>
+    
+                <p>Email Address</p>
+                <input type="email" name="email" placeholder="Your Email" required>
+    
+                <p>Message</p>
+                <input name="message" class="input-message" placeholder="Share your thoughts..." required>
+    
+                <button type="submit"><i class='bx bx-send'></i> Send Message</button>
+            </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="left-footer">
+            <img src="images/logo_icon.svg" alt="logo">
+        </div>
+        <h1>©</h1>
+        <h2>CDJ Dev 2025. ALL RIGHTS RESERVED </h2>
+    </footer>
+    </div>
+
+<script src="js/app.js"></script>
+
+<!--CARD TILT-->
+<script src="js/cardtilt.js"></script>
+<!--NAV BAR SCROLL UP AND DOWN-->
+<script type="text/javascript">
+    var lastScrollTop = 0;
+        header = document.querySelector("header");
+    window.addEventListener("scroll", function(){
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if(scrollTop > lastScrollTop){
+            header.style.top="-80px";
+        }else{
+            header.style.top="0";
+        }
+        lastScrollTop = scrollTop;
+    })
+</script>
+
+</body>
+</html>
